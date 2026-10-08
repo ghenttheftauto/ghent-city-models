@@ -14,9 +14,13 @@ Of één model rechtstreeks: `https://media.githubusercontent.com/media/ghentthe
 ## Structuur
 
 ```
-models/<tegel>/<naam>/<naam>.glb   # glTF binary, meters, Y-up
+models/<tegel>/<naam>/<naam>.glb   # glTF binary, meters, Y-up, model rond 0,0,0
 models/<tegel>/<naam>/preview.png  # optioneel
 ```
+
+Het model staat op 0,0,0, uitgelijnd. Waar het in Gent staat zit in de glb zelf, in `asset.extras.placement`:
+`{"area": "kuip", "x": 104820.0156, "y": 193957.0938, "taw": 10.134, "turn": -26.477}`: Lambert72 x en y
+(EPSG:31370), hoogte in TAW, en de draaiing in graden rond de verticale as.
 
 Eén map per model onder zijn tegel, namen zoals in de tegelmappen (`kuip/stadshal`, `kuip/postplaza`).
 
